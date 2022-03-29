@@ -98,11 +98,7 @@ size_t teleports::find_solution(){
         
         size_t add_after = largest_component.starting_vertex;
         size_t add_before = walking[add_after];
-        if(available_teleports > 0)
-            if(add_after == POSITION::BEGIN){
-                add_after = find_vertex_before_end();
-                add_before = POSITION::END;
-            }
+        
         double position = get_position_between(add_after, add_before);
         size_t to = add_vertex(position);
         
