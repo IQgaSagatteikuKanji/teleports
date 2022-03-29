@@ -132,7 +132,7 @@ teleports::COMPONENTS teleports::find_largest_component_in_graph(){
                 current_pos = portals.get_adjacent_vertices_to(current_pos).front();
                 if(current_pos == i) 
                     repeat_walk = true;
-                else counter++;
+                counter++;
             }
         }
         if(counter > largest_component.vertices_in_component && repeat_walk == true){
